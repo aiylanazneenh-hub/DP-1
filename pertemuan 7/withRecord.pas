@@ -1,0 +1,35 @@
+program materi_with_record;
+uses crt;
+
+type
+    waktu = record
+        tanggal, tahun : integer;
+        bulan : string;
+end;
+
+var
+    hari_ini : waktu;
+
+begin
+    clrscr;
+
+    //pernyataan with --> untuk mempersingkat kode
+    {with variabel do
+        begin
+            statement
+        end;}
+
+    with hari_ini do
+        begin
+            write('Masukkan tanggal : ');
+            readln(tanggal);
+
+            write('Masukkan bulan : ');
+            readln(bulan);
+
+            write('Masukkan tahun : ');
+            readln(tahun);
+
+            writeln(tanggal, ' ', bulan, ' ', tahun);
+        end;
+end.
